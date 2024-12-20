@@ -93,9 +93,12 @@
 
             if (selectedFicha === "ficha") {
                 // Verifica usuários válidos para a Ficha Coletiva
-                if (validUsersFicha[username] === password) {
-                    window.location.href = "ficha.html"; // Redireciona para a Ficha Coletiva
-                } else {
+               if (validUsersFicha[username] === password) {
+    window.location.href = "formulario.html"; // Redireciona para o formulário após login
+} else if (username === validIndividualUser.username && password === validIndividualUser.password) {
+    window.location.href = "orientação.html"; // Redireciona para outra página
+}
+
                     alert("Usuário ou senha inválidos para a Ficha Coletiva!");
                 }
             } else if (selectedFicha === "orientação") {
